@@ -1,0 +1,36 @@
+{% extends "./layout/layout.html" %}
+{%  block maincontent %}
+
+<div class="container">
+    <form method="POST" class="col lg-5 mx-auto border p-4 m-4 shadow rounded">
+          <h1 class="display-6 "> Add Student</h1>
+          <hr>
+          {% if message %}
+          <p class="alert alert-sucsess">{{ message }}</p>
+          {% endif %}
+            <div class="mb-3">
+              <label >First Name</label>
+              <input required type="text" name="firstName" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label >Last Name</label>
+              <input required type="text" name="lastName"class="form-control"  >
+            </div>
+            
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input required type="text" name="email"class="form-control" >
+              </div>
+              <div class="mb-3">
+                <label>Age</label>  
+                <input required type="number"name="age" class="form-control" >
+              </div>
+              <br>
+              <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+    </form>
+</div>
+
+{% endblock %}
